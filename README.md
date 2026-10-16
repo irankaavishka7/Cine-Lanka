@@ -1,11 +1,22 @@
-# Cine Lanka — Animated Movie Catalogue
+# Cine-Lanka — Movie Details & Official Video Player
 
-A responsive static movie catalogue with animated poster cards, Sinhala/English interface toggle, search and filters, saved movies (local device storage), and a trailer modal placeholder.
+## Features
+- Responsive dark movie catalogue with hover and entrance animations
+- Search and genre filters
+- Movie details modal
+- Responsive YouTube privacy-enhanced embedded player
+- Fallback link to YouTube when no video ID is connected
+- Accessibility labels and reduced-motion support
+
+## Connect a video you are authorized to embed
+Open `index.html`, find the `const movies = [...]` list, and replace the empty `videoId` value for the relevant movie with the 11-character YouTube video ID. For example:
+
+`videoId: "M7lc1UVf-VE"`
+
+Only use videos you own or are authorized to embed. This sample intentionally does not assume that full movies are available or licensed. Some videos may disallow embedding or be region/age restricted.
 
 ## Publish on GitHub Pages
-1. Upload `index.html` and `README.md` to the root of your repository.
-2. Commit the changes.
-3. Open **Settings → Pages** and publish from the `main` branch and `/(root)` folder.
+Upload `index.html` to the root of your repository, replacing the old file. Then open **Settings → Pages**, select the `main` branch and `/(root)` folder, and save. Wait for deployment.
 
-## Add a verified official video
-In `index.html`, add a `videoId` property to a movie and update `openMovie()` to embed it using `https://www.youtube-nocookie.com/embed/VIDEO_ID`. Only use official videos or videos you have permission to share. This static demo does not host films, process payments, or include backend accounts.
+## Notes
+This is a static front-end. It does not include a database, user accounts, payments, or an admin dashboard.
