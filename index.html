@@ -355,10 +355,10 @@ function displayMovies() {
     fallback.className = "fallback";
     fallback.textContent = movie.title;
 
-    img.onerror = () => {
-      img.style.display = "none";
-      fallback.style.display = "grid";
-    };
+   img.onerror = () => {
+  img.style.display = "none";
+  fallback.style.display = "grid";
+  };
 
     const rating = document.createElement("span");
     rating.className = "rating";
