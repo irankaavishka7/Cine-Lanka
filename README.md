@@ -1,21 +1,11 @@
-# Cine Lanka — GitHub Pages starter
+# Cine Lanka — Animated Movie Catalogue
 
-Includes a responsive catalogue, search, genre filters, Sinhala/English toggle, YouTube player dialog, and starter Privacy Policy and Contact pages.
+A responsive static movie catalogue with animated poster cards, Sinhala/English interface toggle, search and filters, saved movies (local device storage), and a trailer modal placeholder.
 
-## Video IDs and rights
-Sample `videoId` values are intentionally `null`. Before adding one, verify the video is from an official source and embedding is permitted. Only use `videoType: "licensed-full"` if you have explicit rights to stream the complete movie on your website and in your target territory. A publicly visible YouTube URL does not itself prove redistribution or monetization rights.
+## Publish on GitHub Pages
+1. Upload `index.html` and `README.md` to the root of your repository.
+2. Commit the changes.
+3. Open **Settings → Pages** and publish from the `main` branch and `/(root)` folder.
 
-To add a verified video, edit an item in `index.html`:
-```js
-{title:"Example Movie",year:2025,genre:"Drama",rating:"—",image:"https://example.com/poster.jpg",videoId:"ABCDEFGHIJK",videoType:"official-trailer"}
-```
-Replace the sample ID with the actual 11-character ID from a verified official YouTube video.
-
-## Publish to GitHub Pages
-1. Unzip this project.
-2. In your GitHub repository, upload/replace `index.html`, `privacy.html`, `contact.html`, and `README.md` in the same root folder as the currently published `index.html`.
-3. Commit the files to the branch/folder configured under **Settings → Pages**.
-4. Wait for deployment to complete, then refresh the published site.
-5. Replace starter Privacy Policy and Contact text with accurate details before launch.
-
-This is still a static front end: no database, user accounts, payments, uploads, or private video hosting. Never commit secret API keys. Choose hosting/video services whose terms allow your intended streaming use.
+## Add a verified official video
+In `index.html`, add a `videoId` property to a movie and update `openMovie()` to embed it using `https://www.youtube-nocookie.com/embed/VIDEO_ID`. Only use official videos or videos you have permission to share. This static demo does not host films, process payments, or include backend accounts.
